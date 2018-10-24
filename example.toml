@@ -1,0 +1,7 @@
+description = "Module Description" # Optional; Shown when modman list is called with the verbose flag
+
+init = true # Optional; True if init.sh script in module should be executed
+cleanup = true # Optional; Same as above, but with a cleanup.sh script
+
+[resources] # Required; Map of module files to system locations
+resource1 = ".config/app1/resource1"

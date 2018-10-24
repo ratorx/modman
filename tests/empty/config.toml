@@ -1,0 +1,6 @@
+description = "A test module" # Optional
+
+init = false # Optional, execute init.sh after install
+cleanup = false # Optional execute cleanup.sh before uninstall
+
+[resources]
