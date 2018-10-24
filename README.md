@@ -1,4 +1,4 @@
-# Modman
+# Modman [![Build Status](https://travis-ci.org/ratorx/modman.svg?branch=master)](https://travis-ci.org/ratorx/modman)
 Modman is a tool for managing dotfiles. Currently it supports:
 * Symlinking local files into system locations
 * Init and Cleanup scripts
