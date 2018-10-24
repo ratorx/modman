@@ -6,14 +6,15 @@ matrix:
   fast_finish: true
 
 before_deploy:
-  - cargo build --release
+- cargo build --release
 
 deploy:
   provider: releases
   api_key:
-    secure: O9MMobVc5PCd1aZeNJtbpiYtdRsbOi+qpSteutVMSJq/rKWvOZTqP94vRyIXX2gBH+7l4sBS2IZWQeYQq7BG6RM109s9gAq8ePTHTSN7CTblwIaIDeaRH7QWoedTtUuBtMqngOIG6tyr2NM/4fSMDG9/Ej7K5B7IG2W/BmqPe9DI58qw9wOLYoKpgBR9jQGRN+Lj1b5+hLyPV903QNTHlksS2KpWCFzosg/Zjj8wpxfM1MGGWGRenTiDrBraV2Eu25M0e1MCQC3NS3+/iHrFk9AcZFQeo6M8J1F4FAqI1I28rp0gAqAirNpJn0/YQYydQ70KEjf5LFeLBamSGqdl8pSX9+eT8o7fmDQffKZjUHwzHglKU6wvTk/n+xPArdV1Wb+gH13Vv+zOrAgmD1V0828SiibwsJLK/6ciqwXMydKzGdAf/js8U6bZfVdsXwUohmw8itnTQE5T2FtmwnF/pGUzfBsj/6/VHLLQXakUjFkWL59A2vqDqb94Gvc+XzpYot1MIIW25MT4Oa0Eab/IrHiVJot/SDLDX34CvwWMzooWOmkwrXpeKvO9EYVAHMz7gYKOoKGTx3UG1EqoOAY1nA7SfqXW7iDh3fPm1es87f5TpkIOGHo0D++8mvUt1P0lTY91ORAwf/DvkEIMi7pir+YQg5jguEmPnypzWpiCRk8=
+    secure: UvZxhlgweZ6footT03GqQXNV5YBwiqgVrMh+C8//adLEnubkUPMk8yRwUs0BZWVqtwP31lcBQrqqVO1h7mAJNU6TPRZALSpqwTIFt9OzKQGssqJ8qRawYg+M7iircFRziLMdu89yKGG1taS6UwtzIcs+EiwdHRXjuO6jcjI1EKZuoHEOXXwE6Fszx9MtxcHv8LFn1cr6OUNHHlix/x2lwpZ1wX2rifLkq4ljX3yFEzSYmFvmi3HFtVNrXnQAL3VqSd+eANSfEIRWnn57W7L8gS6upJovY8eH5HvX/7G/92ypM8RmycIlmTu5v/ZD16FfpVHT8FEAWBrzFSuekSksmhwB0XZI3HLLmpmtKNKnD2RaBX5xv7+Ik+rOmBax4fKoK9wbOF1YMgSGUl148mZnCTML63/Nk2dIK+iglATPnFancbOzbV45K0LbJWNePDjLZfQYT5tJYecMxPIq8WueXtbQHGT4WGutcNJjq2/5eYjELkWahJJL3GMpj1vCTg77Xk5LEu7p+3BEU0f1qfqIgjV+w/ZvhM+D1dFJ+6XnQsKn05L3v3kw+VNRi5CaF6Ynt2sa9OoG+2Vcro9Cy8ih+Mbh5PAbUCrgUFkYWdUgA0O2ML4Z2dOUL3k+Gn1i4XmveGhehycfU4m2+nuk0eyTU9WWiqaWDkjamMwVBEaPtME=
   file: target/release/modman
   on:
+    repo: ratorx/modman
     condition: $TRAVIS_RUST_VERSION = stable
     tags: true
   skip_cleanup: true
