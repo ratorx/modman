@@ -365,11 +365,11 @@ mod tests {
         #[test]
         fn test_new() {
             assert!(
-                !ModuleDef::new("examples/empty").is_err(),
+                !ModuleDef::new("tests/empty").is_err(),
                 "empty is a valid module"
             );
             assert!(
-                !ModuleDef::new("examples/full").is_err(),
+                !ModuleDef::new("tests/full").is_err(),
                 "full is a valid module"
             );
         }
