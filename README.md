@@ -19,12 +19,3 @@ Modman has 3 commands:
 * Better checking to make sure module is valid
 * Better error messages
 * Rust > Python
-
-# Planned features
-* Dependency management
-    * Handle system package depednencies
-    * Handle module dependencies
-* Host-specific configuration
-    * Host specific resources
-    * Host specific dependencies
-* Atomic install/uninstall
