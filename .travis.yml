@@ -15,7 +15,6 @@ deploy:
   file: target/release/modman
   on:
     repo: ratorx/modman
-    condition: $TRAVIS_RUST_VERSION = stable
     tags: true
   skip_cleanup: true
 
