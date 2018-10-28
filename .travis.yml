@@ -7,12 +7,15 @@ matrix:
 
 before_deploy:
 - cargo build --release
+- bash arch/genpkgbuild.sh
 
 deploy:
   provider: releases
   api_key:
     secure: UvZxhlgweZ6footT03GqQXNV5YBwiqgVrMh+C8//adLEnubkUPMk8yRwUs0BZWVqtwP31lcBQrqqVO1h7mAJNU6TPRZALSpqwTIFt9OzKQGssqJ8qRawYg+M7iircFRziLMdu89yKGG1taS6UwtzIcs+EiwdHRXjuO6jcjI1EKZuoHEOXXwE6Fszx9MtxcHv8LFn1cr6OUNHHlix/x2lwpZ1wX2rifLkq4ljX3yFEzSYmFvmi3HFtVNrXnQAL3VqSd+eANSfEIRWnn57W7L8gS6upJovY8eH5HvX/7G/92ypM8RmycIlmTu5v/ZD16FfpVHT8FEAWBrzFSuekSksmhwB0XZI3HLLmpmtKNKnD2RaBX5xv7+Ik+rOmBax4fKoK9wbOF1YMgSGUl148mZnCTML63/Nk2dIK+iglATPnFancbOzbV45K0LbJWNePDjLZfQYT5tJYecMxPIq8WueXtbQHGT4WGutcNJjq2/5eYjELkWahJJL3GMpj1vCTg77Xk5LEu7p+3BEU0f1qfqIgjV+w/ZvhM+D1dFJ+6XnQsKn05L3v3kw+VNRi5CaF6Ynt2sa9OoG+2Vcro9Cy8ih+Mbh5PAbUCrgUFkYWdUgA0O2ML4Z2dOUL3k+Gn1i4XmveGhehycfU4m2+nuk0eyTU9WWiqaWDkjamMwVBEaPtME=
-  file: target/release/modman
+  file: 
+    - target/release/modman
+    - PKGBUILD
   on:
     repo: ratorx/modman
     tags: true
