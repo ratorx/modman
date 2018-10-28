@@ -1,5 +1,5 @@
 # Maintainer: Reeto C. <me at ree dot to>
-pkgname=modman-bin
+pkgname=modman
 pkgver=
 pkgrel=1
 pkgdesc="A simple configuration management tool"
@@ -10,12 +10,12 @@ depends=('gcc-libs')
 provides=('modman')
 
 source=(
-    "https://github.com/ratorx/modman/releases/download/${pkgver}/${pkgname/-bin/}"
+    "${url}/releases/download/${pkgver}/${pkgname}"
     "https://raw.githubusercontent.com/ratorx/modman/master/LICENSE"
 )
 sha256sums=
 
 package() {
-    install -Dm755 "${srcdir}/${pkgname/-bin/}" "${pkgdir}/usr/bin/${pkgname/-bin/}"
+    install -Dm755 "${srcdir}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
     install -Dm644 "${srcdir}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
